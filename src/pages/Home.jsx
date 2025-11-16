@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 import { getStatistics, APPLICATION_STATUSES } from '../utils/storage';
 
@@ -63,12 +64,12 @@ function Home() {
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-2">No applications yet</h3>
           <p className="text-gray-600 mb-4">Start tracking your job applications by adding your first one!</p>
-          <a
-            href="/applications"
+          <Link
+            to="/applications"
             className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
             Add Application
-          </a>
+          </Link>
         </div>
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
